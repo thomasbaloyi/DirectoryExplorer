@@ -30,8 +30,7 @@ app.get("/directory", (req, res) => {
         extension: path.extname(file.name),
         created: stats.birthtime,
         isDirectory: file.isDirectory(),
-        permissions: getPermissionsString(stats),
-        absolutePath
+        permissions: getPermissionsString(stats)
       };
     });
 
