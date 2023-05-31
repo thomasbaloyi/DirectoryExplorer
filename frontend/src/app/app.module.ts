@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { SearchComponent } from './components/search/search.component';
 import { ResultComponent } from './components/result/result.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
@@ -23,6 +24,7 @@ import { MatIconModule } from '@angular/material/icon';
     FormsModule,
     MatInputModule,
     MatIconModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
