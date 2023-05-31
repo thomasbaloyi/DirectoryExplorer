@@ -1,8 +1,12 @@
-<mat-form-field appearance="outline">
-    <mat-label>Directory name</mat-label>
-    <input matInput placeholder="Enter a directory">
-</mat-form-field>
+<main>
 
-<ul>
-    <li *ngFor="let directory of directories"><b>{{directory.name}}</b> - {{directory.path}}</li>
-</ul>
+    <mat-form-field appearance="outline">
+        <mat-label>Directory name</mat-label>
+        <input matInput placeholder="Enter a directory">
+    </mat-form-field>
+    
+    <div class="directory" *ngFor="let directory of directories">
+        {{directory.name}}
+    </div>
+
+</main>
