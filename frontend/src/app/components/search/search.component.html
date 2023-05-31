@@ -2,3 +2,7 @@
     <mat-label>Directory name</mat-label>
     <input matInput placeholder="Enter a directory">
 </mat-form-field>
+
+<ul>
+    <li *ngFor="let directory of directories"><b>{{directory.name}}</b> - {{directory.path}}</li>
+</ul>
