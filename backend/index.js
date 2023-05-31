@@ -12,6 +12,7 @@ app.listen(PORT, () => {
 app.get("/directory", (req, res) => {
   const { directoryPath } = req.query;
   const absolutePath = path.join(directoryPath);
+  res.header("Access-Control-Allow-Origin", "*");
 
   fs.readdir(absolutePath, { withFileTypes: true }, (err, files) => {
     if (err) {
@@ -30,7 +31,7 @@ app.get("/directory", (req, res) => {
         extension: path.extname(file.name),
         created: stats.birthtime,
         isDirectory: file.isDirectory(),
-        permissions: getPermissionsString(stats)
+        permissions: getPermissionsString(stats),
       };
     });
 
